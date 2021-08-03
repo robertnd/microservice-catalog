@@ -5,7 +5,7 @@ export interface ICardSettings {
 }
 
 export class CardSettings implements ICardSettings {
-  static DEFAULT: CardSettings = new CardSettings(96, 96, '/content/images/jhipster_family_member_1.svg');
+  static DEFAULT: CardSettings = new CardSettings(65, 45, '/content/images/saf/logo_saf_navbar.png');
 
   constructor(public previewWidth: number, public previewHeight: number, public fallbackImage: string) {}
 }

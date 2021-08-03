@@ -4,14 +4,14 @@
     </div>
 
     <div class="col-md-9">
-        <h1 class="display-4" jhiTranslate="home.title">Welcome, Java Hipster!</h1>
+        <h1 class="display-7" jhiTranslate="home.title">Webservices Catalog</h1>
 
-        <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
+        <p class="lead" jhiTranslate="home.subtitle">Catalog Home</p>
 
         <div [ngSwitch]="isAuthenticated()">
-            <div class="alert alert-success" *ngSwitchCase="true">
+            <div class="alert alert-secondary" *ngSwitchCase="true">
                 <span id="home-logged-message" *ngIf="account" jhiTranslate="home.logged.message"
-                    [translateValues]="{ username: account.login }">You are logged in as user "{{ account.login }}".</span>
+                    [translateValues]="{ username: account.login }">User: {{ account.login }}.</span>
             </div>
 
             <div *ngSwitchCase="true">
@@ -28,21 +28,5 @@
                 <a class="alert-link" routerLink="account/register" jhiTranslate="global.messages.info.register.link">Register a new account</a>
             </div>
         </div>
-
-        <p jhiTranslate="home.question">
-            If you have any question on microservice-catalog:
-        </p>
-
-        <ul>
-            <li><a href="https://github.com/tillias/microservice-catalog" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.homepage">microservice-catalog homepage</a></li>
-            <li><a href="https://stackoverflow.com/questions/ask?tags=microservice-catalog" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.stackoverflow">microservice-catalog on Stack Overflow</a></li>
-            <li><a href="https://github.com/tillias/microservice-catalog/issues?state=open" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.bugtracker">microservice-catalog bug tracker</a></li>
-            <li><a href="https://gitter.im/microservice-catalog/community" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.chat">microservice-catalog public chat room</a></li>
-            <li><a href="https://twitter.com/tillias" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.follow">follow @tillias on Twitter</a></li>
-        </ul>
-
-        <p>
-            <span jhiTranslate="home.like">If you like microservice-catalog, don't forget to give us a star on</span> <a href="https://github.com/tillias/microservice-catalog" target="_blank" rel="noopener noreferrer" jhiTranslate="home.github">GitHub</a>!
-        </p>
     </div>
 </div>

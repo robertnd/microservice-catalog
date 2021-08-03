@@ -1,9 +1,9 @@
 {
   "home": {
-    "title": "Welcome, Java Hipster!",
-    "subtitle": "Here is microservices catalog",
+    "title": "Webservices Catalog",
+    "subtitle": "Catalog Home",
     "logged": {
-      "message": "You are logged in as user \"{{username}}\"."
+      "message": "User: {{username}}"
     },
     "question": "If you have any question on microservice-catalog:",
     "link": {

@@ -1,6 +1,6 @@
 <div class="card mb-4">
-    <div class="card-header border-0">
-        <h3 class="h3 d-inline-block">{{microservice.name}}</h3>
+    <div class="card-header border-0" style="background-color: #07A031;">
+        <h3 class="h3 d-inline-block text-white">{{microservice.name}}</h3>
         <span class="badge badge-secondary align-top">{{microservice.status?.name}}</span>
     </div>
     <div class="card-body">
@@ -19,17 +19,17 @@
 
         <div class="d-flex justify-content-between install mt-3">
             <div>
-                <span><a href="{{microservice.gitUrl}}">GIT</a> </span>
+                <span><a href="{{microservice.gitUrl}}" style="color: green;">GIT</a> </span>
                 <span class="px-1">|</span>
-                <span><a href="{{microservice.ciUrl}}">CI</a> </span>
+                <span><a href="{{microservice.ciUrl}}" style="color: green;">CI</a> </span>
                 <span class="px-1">|</span>
-                <span><a href="{{microservice.swaggerUrl}}">API</a> </span>
+                <span><a href="{{microservice.swaggerUrl}}" style="color: green;">API</a> </span>
             </div>
-            <span class="text-primary">
+            <span class="text-success">
                     <a *ngIf="experimentalFeatures; else production"
                        [routerLink]="['/microservice', microservice.id, 'details', 'custom']">Details</a>
                     <ng-template #production>
-                        <a [routerLink]="['/microservice', microservice.id, 'view']">Details</a>
+                        <a [routerLink]="['/microservice', microservice.id, 'view']" style="color: green;">Details</a>
                     </ng-template>
                     <i class="fa fa-angle-right"></i>
                 </span>
